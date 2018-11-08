@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geo Location</title>
+    <style>
+        html { height: 100% }
+        body { height: 100%; margin: 0; padding: 0 }
+        #map-canvas { height: 100%; width: 50%;}
+        #address {
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            background-color: white;
+            padding: .5em;
+            z-index: 1;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>CityExplorer</h1>
+    <h4>Choose a city and click on the cards to update their information!</h4>
+    <h6>Yes, that's not the most accessible or user-friendly but it's part of the assignment, ok?</h6>
+
+    <!-- City Picker-->
+    <select id="address" onchange="changeLocation( this );">
+        <option value="43.1610,-77.6109, Rochester_New_York">Rochester NY</option>
+        <option value="40.7128,-74.0060, New_York_City">New York NY</option>
+        <option value="41.8781,-87.6298, Chicago">Chicago IL</option>
+        <option value="48.8589507,2.2770202, Paris">Paris</option>
+        <option value="11.5748011,43.1207599, Djibouti">Djibouti</option>
+    </select>
+
+    <!-- Map API-->
+    <div id="map-canvas"><h3>Loading map. Please wait...</h3></div>
+    <!-- Javascript for Google Map Setup, creates Map and puts marker at current location-->
+    <script src="js/map.js"></script>
+
+    <!-- Wikipedia API -->
+    <script src="js/wikipedia.js"></script>    
+    <div id="wikipedia" onclick = "updateWiki(city);">Blah blah blah</div>
+    
+    <div id="pageviewContainer" onclick = "updateViews();">Page Views Today: <strong id="pageview">sdfsdf</strong></div>
+
+    <div id="updatedContainer" onclick="updateDate();">Page Last Updated: <strong id ="touchedDate">fdsfdsf</strong></div>
+
+    <script>
+        updateWiki('Rochester_New_York'); 
+        updateViews(); 
+        updateDate();
+    </script>
+    
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCS7FiY1xS-w6xk4KVzXq7YNwZxXtHZs6A&callback=initMap"></script>
+</body>
+</html>
