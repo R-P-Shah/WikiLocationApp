@@ -23,31 +23,49 @@
 }
 
 body{
+    height: 100vw;
     margin: 0;
     padding: 0;
 }
 
+html { height: 100%; }
+
 #intro{
-    padding: 10vw;
+    padding: 0;
     margin: auto 0;
     text-align: center;
     background-color: #cc0099;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 2px;
-    width: 80vw;
+    width: 100vw;
+    height: 20vw;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 #intro h1{
+    padding-left: 5vw;
+    padding-right: 5vw;
     font-size: 5rem;
     letter-spacing: 2px;
     padding-bottom: 10vw;
 }
 
 #map-canvas{
+    height: 100%; 
+    width: 100vw;
     border-radius: 2px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#addressPickerContainer{
+    position: absolute;
+}
+
+#address {
+    background-color: white;
+    padding: .5em;
+    z-index: 1;
 }
 
 /* Portrait layout (default) */
