@@ -17,13 +17,14 @@
             z-index: 1;
         }
     </style>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
     
 </head>
 <body>
-    <h1>CityExplorer</h1>
-    <h4>Choose a city and click on the cards to update their information!</h4>
-    <h6>Yes, that's not the most accessible or user-friendly but it's part of the assignment, ok?</h6>
-
+    <div id = "intro">
+        <h1>City Explorer</h1>
+        <h4>Choose a city and click on the cards to update their information!</h4>
+    </div>
     <!-- City Picker-->
     <select id="address" onchange="changeLocation( this );">
         <option value="43.1610,-77.6109, Rochester_New_York">Rochester NY</option>
