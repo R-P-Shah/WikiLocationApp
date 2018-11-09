@@ -16,6 +16,14 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+/**
+ * Rahul Shah
+ * Handles all of the app stuff stated above
+ * also handles some of the button interactions
+ */
+var expandFlag = 0; //card not expanded
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -38,9 +46,30 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
 
 app.initialize();
+
+//function to expand the extract card so user can read it
+function changeCard(card){
+  //if expanded,shrink, otherwise expand it
+  if(expandFlag == 0){ //expand
+    card.style.height = 'auto';
+    expandFlag = 1;
+    document.getElementById('expandButton').src = "../img/shrink.png"; //change button
+    //make only these first two buttons fixed
+    document.getElementsByClassName('controlButton')[0].style.position = "fixed";
+    document.getElementsByClassName('controlButton')[1].style.position = "fixed";
+    document.getElementsByClassName('controlButton')[1].style.top = "70vh";
+  }else{ //shrink
+    card.style.height = '20vh';
+    expandFlag = 0;
+    document.getElementById('expandButton').src = "../img/expand.png"; //change button
+    //put buttons back
+    document.getElementsByClassName('controlButton')[0].style.position = "relative";
+    document.getElementsByClassName('controlButton')[1].style.position = "relative"; 
+    document.getElementsByClassName('controlButton')[1].style.top = "0";
+  }
+  
+}

@@ -8,12 +8,10 @@ function initMap(){
 }
 
 function changeLocation(selElem){
-    console.log("Changing marker position!");
     let coords = selElem.value.split(",");
     let myLatlng = new google.maps.LatLng(coords[0], coords[1]);
     let mapOptions = { zoom: 7, center: myLatlng, mapTypeId: google.maps.MapTypeId.HYBRID };
     if (!map) {
-        console.log("Map is not initialized yet");
         map = new google.maps.Map( document.getElementById( 'map-canvas' ), mapOptions);
         marker = new google.maps.Marker( { position: myLatlng, map: map } );
         return;
