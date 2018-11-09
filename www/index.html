@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="css/index.css"/>
     <script src="js/index.js"></script>
-   
 </head>
-<body> <!-- initially load rochester-->
+<body> 
     <div id = "intro">
         <h1>CityExplorer</h1>
     </div>
@@ -35,8 +34,8 @@
             <p><strong id="extract" >Click Refresh</strong><p>
         </div>
         <div  class = "refresh">
-            <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="../img/refresh.png"/>
-            <img class = "controlButton" id = "expandButton" onclick="changeCard(this.parentNode.parentNode);"  alt="EXPAND or SHRINK" src="../img/expand.png"/>
+            <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="img/refresh.png"/>
+            <img class = "controlButton" id = "expandButton" onclick="changeCard(this.parentNode.parentNode);"  alt="EXPAND or SHRINK" src="img/expand.png"/>
         </div>
     </div>
     
@@ -44,7 +43,7 @@
         <p class= "label">Page Views Today:</p> 
         <p><strong class = "generated" id="pageview">Click Refresh</strong></p>
         <div  class = "refresh">
-            <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="../img/refresh.png"/>
+            <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="img/refresh.png"/>
         </div>
     </div>
 
@@ -52,11 +51,11 @@
         <p class = "label">Page Last Updated:<p>
         <p><strong class = "generated" id ="touchedDate">Click Refresh</strong></p>
         <div  class = "refresh">
-            <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="../img/refresh.png"/>
+            <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="img/refresh.png"/>
         </div>
     </div>
-
-    <script>
+    <!-- initially load rochester-->
+    <script> 
         //initial calls to update page
         updateWiki('Rochester_New_York'); 
     </script>

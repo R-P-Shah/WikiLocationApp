@@ -57,12 +57,12 @@ function changeCard(card){
   if(expandFlag == 0){ //expand
     card.style.height = 'auto';
     expandFlag = 1;
-    document.getElementById('expandButton').src = "../img/shrink.png"; //change button
+    document.getElementById('expandButton').src = "img/shrink.png"; //change button
     //make only these first two buttons fixed
   }else{ //shrink
     card.style.height = '20vh';
     expandFlag = 0;
-    document.getElementById('expandButton').src = "../img/expand.png"; //change button
+    document.getElementById('expandButton').src = "img/expand.png"; //change button
     //put buttons back
   }
   
