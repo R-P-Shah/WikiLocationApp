@@ -59,17 +59,11 @@ function changeCard(card){
     expandFlag = 1;
     document.getElementById('expandButton').src = "../img/shrink.png"; //change button
     //make only these first two buttons fixed
-    document.getElementsByClassName('controlButton')[0].style.position = "fixed";
-    document.getElementsByClassName('controlButton')[1].style.position = "fixed";
-    document.getElementsByClassName('controlButton')[1].style.top = "70vh";
   }else{ //shrink
     card.style.height = '20vh';
     expandFlag = 0;
     document.getElementById('expandButton').src = "../img/expand.png"; //change button
     //put buttons back
-    document.getElementsByClassName('controlButton')[0].style.position = "relative";
-    document.getElementsByClassName('controlButton')[1].style.position = "relative"; 
-    document.getElementsByClassName('controlButton')[1].style.top = "0";
   }
   
 }

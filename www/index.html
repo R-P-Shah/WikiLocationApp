@@ -31,8 +31,8 @@
     <script src="js/wikipedia.js"></script>    
     <div class = "card" id="wikipedia" onclick="updateExtract();"> 
         <p class= "label">About:</p> 
-        <div id="extract" >
-            <p><strong>Click Refresh</strong><p>
+        <div>
+            <p><strong id="extract" >Click Refresh</strong><p>
         </div>
         <div  class = "refresh">
             <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="../img/refresh.png"/>
@@ -42,7 +42,7 @@
     
     <div class = "card" id="pageviewContainer" onclick = "updateViews();">
         <p class= "label">Page Views Today:</p> 
-        <strong class = "generated" id="pageview">Click Refresh</strong>
+        <p><strong class = "generated" id="pageview">Click Refresh</strong></p>
         <div  class = "refresh">
             <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="../img/refresh.png"/>
         </div>
@@ -50,7 +50,7 @@
 
     <div class = "card" id="updatedContainer" onclick="updateDate();">
         <p class = "label">Page Last Updated:<p>
-        <strong class = "generated" id ="touchedDate">Click Refresh</strong>
+        <p><strong class = "generated" id ="touchedDate">Click Refresh</strong></p>
         <div  class = "refresh">
             <img  class = "controlButton" onclick = "updateWiki(city);"  alt="REFRESH" src="../img/refresh.png"/>
         </div>
