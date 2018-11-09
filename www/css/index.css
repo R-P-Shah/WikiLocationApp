@@ -22,7 +22,7 @@
 }
 
 body{
-    height: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #ffcc00;
@@ -185,8 +185,6 @@ html { height: 100%; }
     p{
         font-size: 3rem;
     }
-
-
 }
 
 /* Big screens*/
@@ -204,11 +202,12 @@ html { height: 100%; }
     #intro h1 {
         font-size: 10rem;
     }
-    
-    .controlButton{
+
+     .controlButton{
         width: 80px;
     }
 
+    
     .controlButton:nth-of-type(2){
         display: none;
     }
@@ -219,5 +218,7 @@ html { height: 100%; }
 
 
 }
+
+
 
 
