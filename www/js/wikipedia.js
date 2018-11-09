@@ -27,7 +27,7 @@ function updateWiki(c) {
      //get just the extract
      var page = response[key];
      var extract = page['extract'];
-     document.getElementById("wikipedia").innerHTML = extract;
+     document.getElementById("extract").innerHTML = extract;
 
      //update variables
      //the Wikipedia API is garbage so I have to do this every time, forgive me

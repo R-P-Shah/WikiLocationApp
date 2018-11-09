@@ -12,7 +12,7 @@
         <h1>CityExplorer</h1>
     </div>
     <!-- City Picker-->
-    <div>
+    <div id="addressPickerContainer">
         <select id="address" onchange="changeLocation( this );">
             <option value="43.1610,-77.6109, Rochester_New_York">Rochester NY</option>
             <option value="40.7128,-74.0060, New_York_City">New York NY</option>
@@ -22,19 +22,27 @@
         </select>
     </div>
     <!-- Map API-->
-    <div id="map-canvas"><h3>Loading map. Please wait...</h3></div>
+    <div class = "card" id="map-canvas"><h3>Loading map. Please wait...</h3></div>
     <!-- Javascript for Google Map Setup, creates Map and puts marker at current location-->
     <script src="js/map.js"></script>
 
     <!-- Wikipedia API -->
     <script src="js/wikipedia.js"></script>    
-    <div id="wikipedia" onclick = "updateWiki(city);">Blah blah blah</div>
+    <div class = "card" id="wikipedia"> 
+        <span id="extract">
+            Blah blah blah
+        </span>
+        <span  onclick = "updateWiki(city);">
+            REFRESH
+        </span>
+    </div>
     
-    <div id="pageviewContainer" onclick = "updateViews();">Page Views Today: <strong id="pageview">sdfsdf</strong></div>
+    <div class = "card" id="pageviewContainer" onclick = "updateViews();">Page Views Today: <strong id="pageview">sdfsdf</strong></div>
 
-    <div id="updatedContainer" onclick="updateDate();">Page Last Updated: <strong id ="touchedDate">fdsfdsf</strong></div>
+    <div class = "card" id="updatedContainer" onclick="updateDate();">Page Last Updated: <strong id ="touchedDate">fdsfdsf</strong></div>
 
     <script>
+        //initial calls to update page
         updateWiki('Rochester_New_York'); 
         updateViews(); 
         updateDate();

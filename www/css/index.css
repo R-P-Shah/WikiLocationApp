@@ -17,7 +17,6 @@
  * under the License.
  */
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
     margin: 0;
     padding: 0;
 }
@@ -26,9 +25,20 @@ body{
     height: 100vw;
     margin: 0;
     padding: 0;
+    background-color: #f2f2f2;
 }
 
 html { height: 100%; }
+
+.card{
+    padding: 2.5vw;
+    min-height: 2.5vh;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.36), 0 3px 6px rgba(0,0,0,0.50);
+    background-color: #d9d9d9;
+    margin: 1.5vw;
+    margin-top: 2vh;
+}
 
 #intro{
     padding: 0;
@@ -39,33 +49,50 @@ html { height: 100%; }
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 2px;
     width: 100vw;
-    height: 20vw;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 10vw;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.36), 0 3px 6px rgba(0,0,0,0.50);
 }
 
 #intro h1{
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-top: 2.5vw;
     font-size: 5rem;
     letter-spacing: 2px;
-    padding-bottom: 10vw;
 }
 
 #map-canvas{
-    height: 100%; 
-    width: 100vw;
-    border-radius: 2px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: 30vh; 
+    width: 70vw;
 }
 
 #addressPickerContainer{
-    position: absolute;
+    background-color: #660066;
+    width: 100vw;
+    height: 5vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 #address {
-    background-color: white;
-    padding: .5em;
-    z-index: 1;
+    margin-right: 40vw;
+    margin-left: 40vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    width:20vw;
+    /*background-color: white; */
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: .5vh;
+    padding-bottom: .5vw;
+}
+
+#wikipedia{
+    padding: 3vw;
+    padding-right: 30vw;
+    text-align: justify;
+    overflow-y: hidden;
+    height: 20vh;
 }
 
 /* Portrait layout (default) */
@@ -82,6 +109,8 @@ html { height: 100%; }
                                    /* offset horizontal: half of text area width */
 }
 
+
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
@@ -89,6 +118,32 @@ html { height: 100%; }
         padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
         margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
                                       /* offset horizontal: half of image width and text area width */
+    }
+}
+
+@media screen and (max-width: 1420px){
+    #intro h1{
+        font-size: 3rem;
+    }
+
+    #intro{
+        height: 10vh;
+    }
+
+    #addressPickerContainer{
+        height: 8vh;
+    }
+
+    #address{
+        margin-top: 1vh;
+        width: 50vw;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        font-size: 1.5rem;
+    }
+
+    #map-canvas{
+        width: 92vw;
     }
 }
 
